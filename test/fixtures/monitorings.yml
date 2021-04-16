@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tenant_id: 1
+  receive_id: MyString
+  receive_type: MyString
+  kind: 1
+  title: MyString
+  content: MyText
+  event_id: 1
+  extra_data: 
+  deleted_t: 2021-04-15 18:06:58
+  created_t: 2021-04-15 18:06:58
+
+two:
+  tenant_id: 1
+  receive_id: MyString
+  receive_type: MyString
+  kind: 1
+  title: MyString
+  content: MyText
+  event_id: 1
+  extra_data: 
+  deleted_t: 2021-04-15 18:06:58
+  created_t: 2021-04-15 18:06:58

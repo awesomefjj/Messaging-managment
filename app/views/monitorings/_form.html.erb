@@ -1,0 +1,67 @@
+<%= form_with(model: monitoring, local: true) do |form| %>
+  <% if monitoring.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monitoring.errors.count, "error") %> prohibited this monitoring from being saved:</h2>
+
+      <ul>
+        <% monitoring.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tenant_id %>
+    <%= form.number_field :tenant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receive_id %>
+    <%= form.text_field :receive_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receive_type %>
+    <%= form.text_field :receive_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.number_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :event_id %>
+    <%= form.number_field :event_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extra_data %>
+    <%= form.text_field :extra_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted_t %>
+    <%= form.datetime_select :deleted_t %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_t %>
+    <%= form.datetime_select :created_t %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

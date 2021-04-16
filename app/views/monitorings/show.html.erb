@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tenant:</strong>
+  <%= @monitoring.tenant_id %>
+</p>
+
+<p>
+  <strong>Receive:</strong>
+  <%= @monitoring.receive_id %>
+</p>
+
+<p>
+  <strong>Receive type:</strong>
+  <%= @monitoring.receive_type %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @monitoring.kind %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @monitoring.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @monitoring.content %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @monitoring.event_id %>
+</p>
+
+<p>
+  <strong>Extra data:</strong>
+  <%= @monitoring.extra_data %>
+</p>
+
+<p>
+  <strong>Deleted t:</strong>
+  <%= @monitoring.deleted_t %>
+</p>
+
+<p>
+  <strong>Created t:</strong>
+  <%= @monitoring.created_t %>
+</p>
+
+<%= link_to 'Edit', edit_monitoring_path(@monitoring) %> |
+<%= link_to 'Back', monitorings_path %>
