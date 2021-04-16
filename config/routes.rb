@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   get "display", to: "display#new"
   post "display", to: "display#show"
   get "index_display", to: "display#index"
+
+  get "recei", to: "search#new"
+post "recei", to: "search#index"
+
+get "test", to: "search#index"
+ 
+
+  
 end

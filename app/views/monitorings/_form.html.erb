@@ -11,57 +11,62 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :tenant_id %>
-    <%= form.number_field :tenant_id %>
+  
+
+
+<form>
+  <div class="row justify-content-center">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">TenantID</label>
+      <%= form.number_field :tenant_id, class:"form-control", id:"inputEmail4", placeholder:"email" %>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">ReceiveID</label>
+      <%= form.text_field :receive_id,class:"form-control", id:"inputPassword4", placeholder:"Receiver" %>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">ReceiveTYPE</label>
+      <%= form.text_field :receive_type,class:"form-control", id:"inputPassword4", placeholder:"typeNum" %>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Kind</label>
+      <%= form.number_field :kind,class:"form-control", id:"inputPassword4", placeholder:"kindNum" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :receive_id %>
-    <%= form.text_field :receive_id %>
+  <div class="form-group">
+    <label for="inputAddress">Title</label>
+    <%= form.text_field :title,class:"form-control", id:"inputPassword4", placeholder:"Title" %>
   </div>
-
-  <div class="field">
-    <%= form.label :receive_type %>
-    <%= form.text_field :receive_type %>
+  <div class="form-group">
+    <label for="inputAddress2">Content</label>
+    <%= form.text_field :content,class:"form-control", id:"inputPassword4", placeholder:"typeNum" %>
   </div>
-
-  <div class="field">
-    <%= form.label :kind %>
-    <%= form.number_field :kind %>
+  <div class="row justify-content-center">
+    <div class="form-group col-md-2">
+      <label for="inputCity">EventID</label>
+      <%= form.number_field :event_id,class:"form-control", id:"inputPassword4", placeholder:"eventNum" %>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputState">extraData</label>
+      <%= form.text_field :extra_data,class:"form-control", id:"inputPassword4", placeholder:"Data" %>
+    </div>
+    
+      <div class="field form-group">
+        <%= form.label :deleted_t %>
+        <%= form.datetime_select :deleted_t %>
+      </div>
+    
+      
+    
+    <div class="field form-group">
+      <%= form.label :created_t %>
+      <%= form.datetime_select :created_t %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :event_id %>
-    <%= form.number_field :event_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :extra_data %>
-    <%= form.text_field :extra_data %>
-  </div>
-
-  <div class="field">
-    <%= form.label :deleted_t %>
-    <%= form.datetime_select :deleted_t %>
-  </div>
-
-  <div class="field">
-    <%= form.label :created_t %>
-    <%= form.datetime_select :created_t %>
-  </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
+
+</form>
 <% end %>

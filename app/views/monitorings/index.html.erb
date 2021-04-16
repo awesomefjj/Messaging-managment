@@ -32,9 +32,9 @@
         <td><%= monitoring.extra_data %></td>
         <td><%= monitoring.deleted_t %></td>
         <td><%= monitoring.created_t %></td>
-        <td><%= link_to 'Show', monitoring %></td>
-        <td><%= link_to 'Edit', edit_monitoring_path(monitoring) %></td>
-        <td><%= link_to 'Destroy', monitoring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'show', monitoring, class:"btn btn-outline-secondary" %></td>
+        <td><%= link_to 'Edit', edit_monitoring_path(monitoring), class:"btn btn-outline-secondary" %></td>
+        <td><%= link_to 'Destroy', monitoring, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-secondary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Monitoring', new_monitoring_path %>
+<%= link_to 'New Monitoring', new_monitoring_path, class: "btn btn-outline-primary"%>

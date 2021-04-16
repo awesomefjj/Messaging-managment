@@ -1,0 +1,17 @@
+<h1>Messages Searching</h1>
+<%= form_with url: recei_path do |form| %>
+
+ <div class="mb-3">
+    <%= form.label :tenant_id %>
+   <%= form.text_field :receive_type, class: "form-control", placeholder: "UserID" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "search", class: "btn btn-primary"%>
+  </div> 
+
+<% end %>
+
+
+
+<%= link_to "click", recei_path %>
