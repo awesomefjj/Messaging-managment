@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   mount API::Root => '/'
   mount GrapeSwaggerRails::Engine => '/api/tm-docs'
   root to:"main#index"
+  
+  get "display", to: "display#new"
+  post "display", to: "display#show"
+  get "index_display", to: "display#index"
 end

@@ -1,0 +1,73 @@
+<h1>hi</h1>
+<h2>
+    <%= Time.now.day %>
+   </h2>
+
+<tbody class="mb-3">
+ 
+    <% @displays.each do |monitoring| %> 
+    <div class="form-row me-4 card card-body">
+     <div class=" form-group " >
+        <label for="staticEmail" class="col-sm-2 col-form-label">body</label>
+        <%= monitoring.content %>
+        </div>
+        <div class=" form-group " >
+            <label for="staticEmail" class="col-sm-2 col-form-label">created by</label>
+            <%= monitoring.tenant_id %>
+            </div>
+            <div class=" form-group " >
+                <label for="staticEmail" class="col-sm-2 col-form-label">time</label>
+                <%= monitoring.created_t %>
+                </div>
+    </div>
+    <% end %>
+    
+ 
+    </tbody>
+
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-3">
+        <div class="card report-card">
+            <div class="card-body">
+                <div class="row d-flex justify-content-center">
+                    <div class="col">
+                        <p class="text-dark mb-0 font-weight-semibold">发送总量</p>
+                        <h3 class="m-0">
+                            <%= @display_all.size %>
+                        </h3>
+                        <p class="mb-0 text-truncate text-muted"><span class="text-success"><i class="mdi mdi-trending-up"></i>8.5%</span> New Sessions Today</p>
+                    </div>
+                    <div class="col-auto align-self-center">
+                        <div class="report-main-icon bg-light-alt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-self-center text-muted icon-sm"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>  
+                        </div>
+                    </div>
+                </div>
+            </div><!--end card-body--> 
+        </div><!--end card--> 
+    </div> <!--end col--> 
+    
+        <div class="col-md-6 col-lg-3">
+            <div class="card report-card">
+                <div class="card-body">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+                            <p class="text-dark mb-0 font-weight-semibold">今日发送量</p>
+                            <h3 class="m-0">
+                                <%= @today_num.size %>
+                            </h3>
+                            <p class="mb-0 text-truncate text-muted"><span class="text-success"><i class="mdi mdi-trending-up"></i>8.5%</span> New Sessions Today</p>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="report-main-icon bg-light-alt">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-self-center text-muted icon-sm"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>  
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end card-body--> 
+            </div><!--end card--> 
+        </div> <!--end col--> 
+    <div style="height: 200px;"></div>
+
+
+    </div>
