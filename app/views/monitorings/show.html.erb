@@ -52,3 +52,4 @@
 
 <%= link_to 'Edit', edit_monitoring_path(@monitoring),class:"btn btn-outline-primary" %> |
 <%= link_to 'Back', monitorings_path,class:"btn btn-outline-primary" %>
+<%= button_to('show all products',show_search_path,method: :get,params:{receive_type: @monitoring.receive_type})%>

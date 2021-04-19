@@ -68,6 +68,29 @@
             </div><!--end card--> 
         </div> <!--end col--> 
     <div style="height: 200px;"></div>
-
+    
 
     </div>
+    <canvas id="myChart"></canvas>
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // 要创建的图表类型
+        type: 'line',
+    
+        // 数据集
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: "My First dataset",
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 11, 10, 2, 20, 30, 45],
+            }]
+        },
+    
+        // 配置选项
+        options: {}
+    });
+    </script>
+    <%= link_to "chart", shows_display_path %>

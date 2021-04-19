@@ -8,6 +8,7 @@ class MonitoringsController < ApplicationController
 
   # GET /monitorings/1 or /monitorings/1.json
   def show
+   
   end
 
   # GET /monitorings/new

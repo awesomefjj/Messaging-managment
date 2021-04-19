@@ -16,9 +16,15 @@ Rails.application.routes.draw do
   get "display", to: "display#new"
   post "display", to: "display#show"
   get "index_display", to: "display#index"
+  get "shows_display", to: "display#show"
 
   get "recei", to: "search#new"
-post "recei", to: "search#index"
+#post "recei", to: "search#show"
+get "show_search", to: "search#show"
+post "show_search", to: "search#show"
+
+get "show_monitorings", to: "monitorings#show"
+post "show_monitorings", to: "monitorings#show"
 
 get "test", to: "search#index"
  

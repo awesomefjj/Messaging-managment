@@ -1,5 +1,5 @@
 <h1>Messages Searching</h1>
-<%= form_with url: recei_path do |form| %>
+<%= form_for :search, remote: false, url: show_search_path do |form| %>
 
  <div class="mb-3">
     <%= form.label :tenant_id %>
@@ -9,9 +9,24 @@
   <div class="mb-3">
     <%= form.submit "search", class: "btn btn-primary"%>
   </div> 
-
+  
+  
 <% end %>
 
+<%= form_for :search2, remote: false, url: show_search_path do |form| %>
+
+ <div class="mb-3">
+    <%= form.label "Created At" %>
+   <%= form.date_select :created_t, class: "form-control", placeholder: "UserID" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "search", class: "btn btn-primary"%>
+  </div> 
+  
+  
+<% end %>
+
+<%= button_to "click", show_search_path %>
 
 
-<%= link_to "click", recei_path %>
