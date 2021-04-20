@@ -1,29 +1,23 @@
-<h1>hi</h1>
-<h2>
-    <%= Time.now.day %>
-   </h2>
-
-<tbody class="mb-3">
- 
-    <% @displays.each do |monitoring| %> 
-    <div class="form-row me-4 card card-body">
-     <div class=" form-group " >
-        <label for="staticEmail" class="col-sm-2 col-form-label">body</label>
-        <%= monitoring.content %>
-        </div>
-        <div class=" form-group " >
-            <label for="staticEmail" class="col-sm-2 col-form-label">created by</label>
-            <%= monitoring.tenant_id %>
-            </div>
-            <div class=" form-group " >
-                <label for="staticEmail" class="col-sm-2 col-form-label">time</label>
-                <%= monitoring.created_t %>
-                </div>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">数据展示</h1>
+      <p class="lead">最新的五条消息以及总发送量与今日发送量</p>
     </div>
-    <% end %>
-    
- 
+  </div>
+<tbody class="mb-3">
+  <% @displays.each do |monitoring| %>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><%= monitoring.title %></h5>
+            <small class="text-muted"><%= monitoring.created_t.to_time.strftime('%B %e at %l:%M %p') %></small>
+          </div>
+          <p class="mb-1"><%= monitoring.content %></p>
+          <small class="text-muted">Created By <%= monitoring.tenant_id %>.</small>
+        </a>
+       </div>
     </tbody>
+  <% end %>
 
 <div class="row justify-content-center">
     <div class="col-md-6 col-lg-3">

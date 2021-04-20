@@ -10,7 +10,9 @@
       <th>Receive type</th>
       <th>Kind</th>
       <th>Title</th>
+      <% if false %>
       <th>Content</th>
+      <% end %>
       <th>Event</th>
       <th>Extra data</th>
       <th>Deleted t</th>
@@ -27,11 +29,13 @@
         <td><%= monitoring.receive_type %></td>
         <td><%= monitoring.kind %></td>
         <td><%= monitoring.title %></td>
+        <% if false %>
         <td><%= monitoring.content %></td>
+        <% end %>
         <td><%= monitoring.event_id %></td>
         <td><%= monitoring.extra_data %></td>
-        <td><%= monitoring.deleted_t %></td>
-        <td><%= monitoring.created_t %></td>
+        <td><%= monitoring.deleted_t.to_time.strftime('%B %e at %l:%M %p') %></td>
+        <td><%= monitoring.created_t.to_time.strftime('%B %e at %l:%M %p') %></td>
         <td><%= link_to 'show', monitoring, class:"btn btn-outline-secondary" %></td>
         <td><%= link_to 'Edit', edit_monitoring_path(monitoring), class:"btn btn-outline-secondary" %></td>
         <td><%= link_to 'Destroy', monitoring, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-secondary" %></td>

@@ -1,26 +1,26 @@
 <h1>This is your messages</h1>
 <div class="mb-3">
  
-    <% @searching.where(receive_type: params.dig(:search, :receive_type)).each do |monitoring| %> 
-    <div class="me-4 card card-body" >
-        <div class="card">
+    <% @searching.where(tenant_id: params.dig(:search, :tenant_id)).each do |monitoring| %> 
+    
+        <div class=card>
             <div class="card-header">
               Created By <%= monitoring.tenant_id %>
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p><%= monitoring.title%><%= button_to('Details',show_monitorings_path,method: :get,params:{id: monitoring.id}, class:"btn btn-outline-secondery")%></p>
+                <p><%= monitoring.title%><%= button_to('Details',show_monitorings_path,method: :get,params:{id: monitoring.id}, class:"btn btn-outline-danger")%></p>
                 
-                <footer class="blockquote-footer">Created at  <%= monitoring.created_t %><cite title="Source Title">Source Title</cite></footer>
+                <footer class="blockquote-footer">Created at  <%= monitoring.created_t.to_time.strftime('%B %e at %l:%M %p') %><cite title="Source Title"></cite></footer>
               </blockquote>
             </div>
-          </div>
+          
           
    </div>
     <% end %>
 
-    <% @searching.where(receive_type: params[:receive_type]).each do |monitoring| %> 
-    <div class="me-4 card card-body" >
+    <% @searching.where("created_at >= ? and created_at <=?", :search2.to_time,:search2.to_time).each do |monitoring| %> 
+    
         <div class="card">
             <div class="card-header">
               Created By <%= monitoring.tenant_id %>
@@ -32,15 +32,10 @@
                 <footer class="blockquote-footer"><cite title="Source Title"></cite>Created at  <%= monitoring.created_t.to_time.strftime('%B %e at %l:%M %p') %></cite></footer>
               </blockquote>
             </div>
-          </div>
+        </div>
           
-   </div>
+   
     <% end %>
-
-    
-
-    
- 
 </div>
 
 
